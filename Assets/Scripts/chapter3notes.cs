@@ -1,0 +1,51 @@
+/*/ week3 interactive scripting teaching notes.
+
+so. i've got my hands full because i want to teach chapters 3 and 4 this week.
+last week was short, only an hour. lol, and they complained, but they didn't do 
+the assignment very well.i should be grading those. i don't want to! there
+are so many! I'll do that later this afternoon.
+
+okay, so, chapter 3.
+we'll be digging into variables, covering the following:
+	writing c# statements properly
+	c# syntax to write variable statements
+	the gameobject component's properties
+	using public variables for the unity inspector panel
+	naming a variable properly
+	declaring a variable's type
+'
+/* 	
+	can i do all of those things without following the book?
+	public class Chapter3Test : MonoBehaviour {	
+		public int myAge = 26;
+		Debug.Log("I am " + myAge + " years old.");
+	}
+
+	yeah, seems like i can.
+*
+
+1. Writing c# statements properly.
+	a. end statements with a semi-colon;
+		Just like you end a sentence with a period.
+	b. in general, programming languages skip white space beyond the first 
+		space.
+	c. Note that in Unity's Inspector panel that Unity increases readability
+		by adding spaces and capitalization to our variable names. 
+		'number1' becomes 'Number 1'.
+	d. You can make edits to the values in the inspector panel while you're 
+		playing your game. this is very useful to tweak movement settings or 
+		lighting settings. BUT they are not permanent. as soon as you stop	
+		the game your settings will revert back to their values before you
+		hit play. So write down your changes!
+	e. Any changes you make in the inspector panel will be saved by unity in 
+		the Scene file. They will override the values set in your script, but 
+		they will not change the values in your script.
+
+// useless! SKIP IT
+Time For Action 0ßœß - Making a Variable Private
+	1. open one of your previous assignments that have a variable and delete the
+		keyword public from it. That's all it takes to make it private.
+	2. Notice that your variable is no longer in the inspector window.
+
+	*/
+	

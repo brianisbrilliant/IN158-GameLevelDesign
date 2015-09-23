@@ -1,0 +1,196 @@
+chapter 5 notes
+Making decisions in code.
+	a computer program is designed to make decisions based on information given to it, and act a certain way when those decisions change.
+	this chapter is going to look at how a computer makes decisions.
+
+	in this chapter we will discuss:
+		if statements.
+		checking for many conditions
+		if-else statements
+		user input condition changes.
+		looping through data in an array, list, or dictionary.
+
+Testing conditions with an if statement.
+
+	if this condition is met, then execute my code block. 
+
+Testing if conditions are true or false (booleans!)
+	a sampleing of conditions that can e true or false:
+		the user pressed a button
+		the temperature is cold
+		the character died
+		the bear ate this fucking writer and his fecal jokes.
+
+	these are yes or no questions, true or false questions.
+
+Time for action! - Create a couple of if statements
+	named "ch5IfStatements"
+
+What just happened?
+	we made a bool variable, which can only be true or false.
+	we then made an if statement, which only runs if the TEST is true. 
+	since we started our bool variable as true, the first if statement ran.
+	THEN, we changed the variable to false, and made another if statement, 
+		set to run only when the bool variable was NOT true 
+			(in programming, the ! character is the NOT operator) for example. "this suit is black ... !"
+	and since our bool variable was now false, the second if statement ran, because it was NOT true.
+
+	tests only run when they are true. there are many instances where something can be false, but only one 
+	condition where they are true. for example, if i'm looking for the number 0, many other numbers can NOT be 
+	0, but only 0 can be 0. 
+
+	there are of course times when you want more than one thing to be true at a time, and that's what we're 
+	getting into next!
+
+Time for Action! Using the AND && and OR || operators!
+	named "ch5AndOrOperators"
+
+What just happened?
+	we used our bool variable again, which is either TRUE or FALSE.
+	we created a second variable, temperature, and set the value to 40.
+	we used the AND operator to test that Both of TWO criteria must be met for the 
+		statement to be true.
+	we used the OR operator to test that EITHER of TWO criteria must be met for the 
+		statement to be true.
+have a go hero - 
+	try changing the value of temperature to a value lower than 35, only the second 
+		method will run
+
+Using an If-Else statement! hurray!
+	Welcome to another binary statement (binary means two). the if-else statement.
+		if the first statement is true, execute the code block
+		if the first statement is false, execute the second code block instead.
+		if this, else that. it's pretty freaking simple.
+Time for Action
+	named "ch5IfElseStatement"
+
+What just happened?
+	well, the first code block was false, so we subbed in the else statement code block. 
+
+pop quiz
+	humans can answer yes or know, what does an if statement need? 
+		true or false
+	what logical operator can turn a true condition into false, and vice versa?
+		oh, the NOT operator: '!'
+	if two conditions must test as true to make an if statement execute...
+		AND operator '&&'
+	if only one of two conditions must be met....
+		OR operator
+
+Making Decisions based on user input
+	this is the fun stuff, this is when you get to make a program that talks back to the user!
+	note that you don't have to use curly braces for one-line statements. 
+		feel free to never use this.
+
+Storing data in an array - wait, what? that's all we get for user input??? fuck that! fuck that! jesus! we don't even get a time for action????
+
+Storing data in an array, a list, or a dictionary.
+	two ways to access items in a list:
+		Direct retrieval - the location of the item is known, code is written to access 
+			it directly.
+		Loop Retrieval - The location is not known, so code is written to loop through every item
+			in the list until the desired item is found.
+	Scripting Reference GetComponents()
+		public HingeJoint[] hingeJoints;	// this is an array[]
+		void Example()
+		{
+			hingeJoints = gameObject.GetComponents<HingeJoint>();
+			...
+		}
+
+	that example is still pretty bullshit. idk what's going on.
+	an array is a supervariable that stores variables.
+
+storing items in an array[]
+	line 1: public HingeJoint[] hingejoints;
+	1. public means the array will appear in the inspector, and that it is accessible from other 			scripts.
+	2.HingeJoint[] is the type of variable being created. it's going to be a hingeJoint type (OH, 			ok, hingeJoint is a class in the Scripting Reference. They made a new type.)
+	3. the square brackets specify that the variable created is going to be an array that holds many 		hingeJoint type objects.
+	4. hingeJoints is the name of the array being created (only one array).
+
+	so another example would be:
+		public int[] numbers;		// this is an array[]
+
+
+	as per the code on line 3: 
+		hingeJoints.GetComponent<HingeJoint>()
+	
+	1. hingeJoints is the array object
+	2. GameObject is the variable that stores the gameobjecy this script is attached to.
+	3. GetComponents<HingeJoint>() is a method! notice the parenthesis.
+	4. They call the different variables in an array 'elements'.
+
+	shoot me in the face, this is complicated. there are a lot of things he's not explaining.
+	an array is a list. it's not complicated. 
+	you all know what a list is.
+	each variable in the array(list) is assigned a number, starting with 0.
+	
+	of course he doesn't really want to use an array, he wan'ts to use a list. many people will
+		tell you about arrays when they just want you to move on to something better, like a list.
+Storing items in a list
+	look! it's so much easier and no one uses arrays unless they have to. fucking eh.
+	here's why lists are better!
+	1. you can change the size of a list. (not so an array)
+	2. you can easily add to and remove items from a list (to change an array, you'd have to make
+		a new one)
+
+	why the hell did we learn about arrays????? AHHHHHHHHH
+		// because they MIGHT see it used in older code, and they should know what it is.
+
+Time for Action - Create a List of Pony Names
+	didn't make a fucking list of ponies, that's for fucking sure.
+	please kids, edit these lists to make them your own. you'll learn so little by copying the text
+		without understanding and editing it. 
+
+	Note the dot syntax that we'll be going over more next chapter. for this lesson it's enough
+		to know that '.Add' and '.Count' are methods inside the "List' class.
+
+	i should ask someone if Generic isn't included in Collections, because it looks like it is.
+
+	1. that second line tells the computer where to look for the List() class.
+	2. line 8's code is making a new empty list of the variable type "string"
+		everything on the left side of the assignment operator (the equals sign) has to do with 
+		defining the list variable. everything on the right side of the assignment operator has to 
+		do with making the list.
+	3. the next set of lines is adding a string ("anything between quotes") to a new element of 
+	the list added to the end of the list.
+	4. line 14 outputs to the log a sentence! note the concatenation with the addition symbols. you can have text, then output the value of a variable, then more text.
+Time for Action - create a Dictionary
+	two ways to add an entry to a dictionary, a dictionary has a number attached to another item, for instance a string.
+	the number is called the key.
+
+Time For Action - Collection Initializer
+
+	so, this collection initializer just creates the items in the list or ditionary as they are created.
+
+PART TWO CHAPTER 5
+
+Looping Through Lists to Make Decisions
+	these previous examples in ch5 showed how to put data into arrays, lists, and dictionaries. Now we're going to learn how to get data out of them. with loops!
+	common loops:
+		foreach
+		for
+		while
+using the foreach loop.
+	the preferred way to go through these list types is with a foreach loop
+Time for Action! - using foreach loops to retrieve data.
+
+so what just happened?
+	the foreach loop runs once for every item it comes across (every item in the list.)
+	the if statement isn't true (and doesn't execute) until it comes across the item it's looking for!
+	so nothing is sent to the debug.log until the if statement is true!
+
+Using the For Loop
+	a for loop "allos a code block to be executed a specific number of 
+	times."
+	the syntax is as follows:
+
+		for (initializer; condition; iterator) {
+			code block;
+		}
+
+time for action!!!
+	
+
+
+

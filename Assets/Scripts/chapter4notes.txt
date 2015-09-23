@@ -1,0 +1,101 @@
+// sorry, using the computer this time, so page numbers will be off.
+pg.111
+	All about methods.
+	this chapter will cover the features of methods:
+		ending method definitions with curly braces
+		using methods in a script
+		naming methods properly
+		defining a method
+		callinig a method
+		returning a value from a method
+		using unity's "Update() and Start() methods.
+	
+	variables are the first major building block of C#, and methods are the second, so let's dive in.
+	
+	Ending a method definition using curly braces
+	methods don't have semi-colons at the end, they are defined {inside curly braces.}
+pg.113
+	There are two reasons for using methods in a script:
+		to provide behavior to a gameobject (because all of the executable code is inside of a code block)
+		and to create reusable sections of code.
+	methods are what we put our variables inside, and if we cut it up we can reuse parts we've already scripted.
+pg.113
+	always use meaningful names for your methods, so you know what they do in 6 weeks.
+	use verbs. action words. what does the method DO?
+	
+	when naming methods, the common convention is to start with an uppercase letter, to differentiate it from a variable. i mean, the () brackets at the end will be different as well, but it looks nice. Following the rules makes your code easier to read for everyone. there is a time and a place for obfuscation, and this class is not that time.
+	
+	here's an example of a method:
+	
+	void AddTwoNumbers()
+	{
+		//code goes here
+	}
+	
+	the first word 'void' is the RETURN TYPE and we'll get into that later. just like variables, methods have
+		types.
+pg.46
+	Minimum requirements for definging a method:
+	1. the type of information the method will return to the place it was called from.
+	2. The name of the method, followed by a pair of parenthesis ()
+	3. a pair of curly braces to contain the code.
+
+	void AMethodName()
+	{
+		// void means it will return nothing;
+		// there are no semi-colons at the end of the method;
+	}
+
+	note that there is no 'public' modifier, so this method is public. Methods can be public and private just like variables.
+	note that there is no code inside this method, and could be removed if we wanted.
+
+pg.47
+	Adding code between the Parenthesis!
+	This involves sending information to the method. for example, in the following example, we use the 
+	method AddTwoNumbers() 3 times, and each time we want to add two DIFFERENT numbers, so we give
+	the method different numbers inside the parenthesis! simple.
+
+	this works just like a function in algebra (i know, a confusing example, i'm sorry!). it's just input
+	and output. f(x,y) = x + y. two numbers are given to the method, and one number is output by the method.
+
+	note that we don't use number1, number2, or number3 inside of the AddTwoNumbers() method, we're using
+	the variables firstNumber and secondNumber. These are two more variables that the method uses and then
+	when the method is done they don't exist because they're out of scope.
+pg.50
+	Returning a value from a method.
+		(power feature)
+	so before, the method didn't return anything. if you can remember we were talking about the return
+	type of a method? so right now the return type of AddTwoNumbers() is 'void'. that means it's not going 
+	to return anything.
+		Now, when we change the return type to 'int', the computer will know that it will return an integer.
+
+	calling a method is a logic detour.	most code is executed from the top to the bottom, but a method call takes a detour to another part of the code, and then comes back to where it was.
+
+Using Unity's Update() and Start() methods.
+	They're MonoDevelopment scripts. you can see that your scripts(classes) are inheriting from the monodev 
+	script, borrowing the methods Stert() and Update(), with the ability to borrow other methods and variables.
+		Start() is only called once, when the scene is loaded (each level of your game if you have several)
+		Update() is called over and over, once every frame of your video game. This is the best place to 
+	put user input scripts, since they need to update quickly. We'll go over user input in the next chapter.
+
+	pop quiz, 
+		min req. for defining a method?
+			return type, name, curly braces. ex. void MethodName() {}
+		purpose of the parentheses at the end of the method's name?
+			it's where the parameters of the method can be passed through. that's the input box.
+		what does void mean in a method definintion?
+			it means that the method returns nothing.
+		in a unity script, how is the Update() method called?
+			every frame, it's called once every frame that the game renders.
+
+
+
+
+
+
+
+
+
+
+
+

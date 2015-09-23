@@ -1,0 +1,88 @@
+we shall start typing at the top!
+This is chapter 2, i'd handwritten chapter 1's notes, and i'm still trying to transcribe them.
+chapter/weekly assignments - chapter/week1 - write out in exquisite detail the steps to build a sandwich. 
+Assume you are in your own kitchen with the required supplies stored in their proper places. (any kind of sandwich)
+
+chapter 2 - introducing the building blocks for unity scripts
+pg. 19
+	while c# may look very complicated, it is comprised of 2 things - variables and methods.
+	relax! here's what the chapter is going to be about:
+		using variables in a script
+		1.using methods in a script
+		2.the class which is a container for variables and methods
+		3.turning a script into a component
+		4.components communicating using the dot syntax.
+		5.lets have a look at these primary concepts.
+pg. 20
+	The words "method" and "function" are the same thing. They are Code blocks. 
+	{They are everything contained between opening and closing curly braces.} 
+	In this class the book will call them methods, and I will try to call them methods, or code blocks.
+	what is a variable? well a variable holds stuff in it. imagine a row of mailboxes, what's inside? 
+	mail, yes - or air - but the mail itself isn't the same every time. sometimes it's letters from a friend, 
+	or packages from amazon, or lots and lots of bills. the contents of our mailbox vary. 
+	(see? vary => variable). now the name or address on your mailbox has to stay the same, so that we can find it. 
+pg. 21
+	a variable name is just a substitute for a value. like this
+
+	theNumber = 5;
+
+	which translates to "theNumber is equal to 5."
+	5 + theNumber = 10, right? because 5 + 5 = 10.
+	but we can do much more than substitute numbers, oh yes!
+pg22
+	TIME FOR ACTION - creating a variable and seeing how it works.
+	go ahead and follow along straight out of the book! and i will display the PDF or ebook on the projector! 
+	this will be a great way to teach! (i hope.)
+	ahh! notice that this script will not run unless it is attached to a game object! i daresay we'll have 
+	be stumped by that at least once before the semester is through, so be on your guard!
+	attach to main camera, make sure it isn't attached twice!
+	also be sure that when you're typing it didn't autocomplete to something else! when i went through this 
+	myself it had autocompleted to "LogType", which is not what I wanted!
+	You might get red error messages from the console, indicating that something was not typed in correctly! 
+		(i will have to make sure to demonstrate this)
+	if you run the game and then quit, you should see 2 items in the console, "11" and "20"
+	and that is what we were looking for when we ran it!
+
+	oh this is cool! look now at the inspector panel of the main camera! under our learning script panel we 
+	now have a variable declared "myNumber" which we can edit within unity! how cool!
+	okay guys, now change the value of myNumber inside of the inspector panel to 19! when you run the program 
+	again you will see that the debug is now 30. notice also that unity will not let you put "A" for the variable value. 
+	in chapter 3 we'll talk about how the computer needs to know exactly what it's dealing with, and this variable 
+	has been declared as an integer value only.
+pg. 24
+	using methods in a script
+	a method is a set of actions we can call in our program over and over (to save our fingers from typing so much, 
+	and to reduce the number of times we misspell something or forget some punctuation.
+
+	Time for action - edit LearningScript again!-- editing your script to look like another is a good exercise
+	 in finding what's different. You will look over your code many times looking for errors.
+	 if you don't want to delete what you have already created, you can comment it out by adding "//" to the 
+	 beginning of the line, like this://public int myNumber = 9;
+	 that's methods for yeh. stuff between curly braces that can be called anywhere in your code.
+
+pg.27
+	a class is a script and a script is a class attached to a game object. 
+	this is twisting my own head a little bit, so i'll keep reading on. 
+	don't worry, he is still going to call them scripts.
+pg.28
+	so, we have two different jobs in unity, one of the game dev, and the other of the programmer (or scripter). 
+	when we work on scripting, we work with variables and methods.
+	but when we go back to being a game dev, we're attaching the scripts to object and they're called Components
+		wow, that's a really confusing way to explain it, i'm sorry, this book isn't great. 
+		all of our objects will have many Components (parts), like a texture component, or a physical mesh component, or 
+		one or more scripts! these are just parts of the game object.
+	also the variables in your scripts are now properties in the Inspector panel of Unity.'
+pg.29
+	you can see on line 4 of LearningScript that we are inheriting (or borrowing) some methods and variables from the class MonoBehaviour
+		we inherited void Start() and void Update()
+	it can be difficult to puzzle out yourself, the start() and update() methods are in the ScriptingAPI side of the Unity user manual, 
+		under UnityEngine > Classes > MonoBehaviour > Start() and Update().
+	(note that the manual is offline!)
+
+	Components communicating with Dot.Syntax
+pg.30
+	transform.position.x is the same as USA.Kansas.Andover.13th&AndoverRD.ButlerCC
+		it is a way to file things with increasing accuracy. it's a heirarchy. it's folders within folders, information within information.
+	and the author just wants you to see it before we address it in chapter 6. (boy, that's a slow pace)
+
+	

@@ -1,0 +1,105 @@
+		chapter 3 homework can be to do all of the Time for Action changes and comment what all of the changes are.
+			and then a pop quiz to write their own versions of the variables without the book. 
+			so, they would show up to class, turn in their homework, and then i would give them 15 minutes to create a new script in unity,
+			with a bool, int, float, and string variable, and they all have to be visible in unity.
+
+pg.31
+	In this chapter we will learn the basics of c# syntax, that is, how to write a 'sentence' in our scripts.
+	The words we know, for the most part, but they don't read nearly the same way. 
+'	we will learn about: 	writing c# statements properly
+							using c# syntax to write variable statements
+							the gameObject Components properties
+							using public variables for the unity inspector panel
+							naming a variable properly
+							declaring a variable for the type of data it will store.
+pg.32
+	rule 1: the end of a statement (like a sentence) is a semi-colon (the one with the comma at the bottom) ; 
+		(think of it like a period at the end of a sentence.)
+	like the line we wrote previously:
+		public int number1 = 2;		
+	there is that semi-colon at the end of the statement. now, computers don't care about white space or carriage returns, 
+'		so we could write that same line of code like this!
+	public
+	int number1
+	=
+	2
+	;
+	all the computer cares about is that semi-colon telling it when the statement ends. that is however a terrible way to write your code,
+		and i do not recommend turning in code this way!
+pg.33
+	note the components of the main camera in the inspector panel.
+	all of the editable variables in the components of the gameObject are just variables in a script. 
+	note that unity adds spaces and capitalization where needed to improve readability.
+
+	this is important to note!
+	changes made while the game is running (in play mode) will be adjusted instantly, but will NOT be saved.
+	only changes made while the game is stopped will be saved.
+
+	changes made in unity to the variables will not affect the script.
+			// which begs the question, will my variables be the same next time i open my project in unity? if so, why?
+		and if you want to reset the variables to the ones provided in the script, you can click the gear next to the script in the inspector
+			and select "reset"
+	note that the keyword 'public' means that the variable will be visible and available to the rest of the program.
+pg.35
+	let's practice the public vs. private variables right now! if the variable doesn't need to be edited in the inspector panel, let's make it private.
+
+	follow along in the book!
+
+	note that the options to edit the two variables are gone!
+	if public or private isn't declared for a variable, it defaults to private.
+pg.36
+	rule 2: write descriptive variable names. 
+	rule 3: begin variable names with a lowerCase letter to differentiate it from the ClassNames (class names' first letters are capitalized)
+		this is called camelCase
+	rule 4: every variable must be declared before it can be used.
+		what do we need to declare? read on.
+		1. what type of variable?
+		2. what's the name of the variable?
+		3. we have to finish the statement with a semi-colon;
+
+			example1: typeOfData variableName;
+			example2: int number1;		// int is a type of variable, dealing with numbers, and number1 is the name of this variable.
+
+		there are a few more things going on that we might know about. 
+		4. since we did not declare it 'public', it's defaulted to 'private'.
+		5. since we did not assign a value to it, it defaults to zero, or 'null'.
+pg.38
+	The Most Common Built-In Variable Types
+	int 	-	a simple integer, ex. the number '3'
+	float	- 	a number with a decimal, ex. '3.14'
+	string	- 	characters in double quotes, ex. "Watch me go now."
+	bool	-	a boolean, either true or false, also represented by 0 for false, or any other number for true.
+
+	Time for Action!
+	add some variables to LearningScript
+	note that the float number needs an 'f' after the numbers.
+	these are member variables.
+	this means that they are a part of the LearningScript class, and not declared inside any other methods or classes.
+		if we had declared 'public int number2' inside of void Start() { }, then the variable would only exist inside of that method.
+
+	the author and i both prefer that you declare your variables all at the top, as opposed to right before you would use them in the script.
+	we will also be creating variables inside of the {curly brackets} of methods. these are called 'local variables' (as opposed 
+		to the 'global variables' we've been using so far.).
+	which brings us to the discussion of SCOPE!
+pg.40
+	Variable Scope! - Determining where a variable can be used.
+
+	again, this is just another hierarchy. it's a good thing that word is so much fun to write. 
+	think about a physical desk, and you have 100 different items on it! it would be very difficult 
+	to get work done when you're trying to sort through all of that, wouldn't it? 
+	Not to mention if you got things mixed up and wrote on the wrong piece of paper!
+	so what do we do? we organize the bits of things that go together, and put them away in folders or drawers. 
+	pens in the drawer, papers in the folders, toys on the far end of the desk!
+	in this way, when you need to work, you can ignore what you don't need, and pretend that 
+	only one certain thing on your desk exists!
+
+	this is how SCOPE works. if your variable isn't needed, it doesn't exist. 
+	making all of your variables global is the same as having everything on your desk, you might change the wrong thing!
+	so they're hidden away until they are needed, inside the methods that use them.
+pg.42
+	summary: how to write a C# statement.
+			all of the public variables are available in the Inspector window of the GameObject the script is assigned to.
+			specifying variable type must be done when declaring the variable, along with it's name.
+			and we learned when variables are in scope.
+
+			next chapter we will cover methods!
